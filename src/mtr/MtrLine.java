@@ -1,14 +1,19 @@
 package mtr;
 
+import java.util.List;
+
 public class MtrLine {
 
-    private String name;
+    private List<MtrStation> mtrStations;
 
-    public String getName() {
-        return name;
+    public MtrLine(List<MtrStation> mtrStations) {
+        this.mtrStations = mtrStations;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {
+        return "MtrLine{" +
+                ", mtrStations=" + mtrStations +
+                '}';
     }
 }

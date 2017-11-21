@@ -1,10 +1,23 @@
 package mtr;
 
+import java.util.List;
+
 public class NetworkInfoController implements Controller {
+
+    private CsvReader csvReader;
+    private List<MtrLine> mtrLines;
+
+    public NetworkInfoController() {
+        csvReader = new CsvReader();
+
+        mtrLines = csvReader.loadLines();
+    }
 
     @Override
     public String listAllTermini() {
-        return null;
+
+
+        return mtrLines.toString();
 
         /**
          * LINE
