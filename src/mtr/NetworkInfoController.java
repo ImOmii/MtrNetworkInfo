@@ -1,0 +1,24 @@
+package mtr;
+
+public class NetworkInfoController implements Controller {
+
+    @Override
+    public String listAllTermini() {
+        return null;
+    }
+
+    @Override
+    public String listStationsInLine(String line) {
+        return null;
+    }
+
+    @Override
+    public String listAllDirectlyConnectedLines(String line) {
+        return null;
+    }
+
+    @Override
+    public String showPathBetween(String stationA, String stationB) {
+        return null;
+    }
+}
