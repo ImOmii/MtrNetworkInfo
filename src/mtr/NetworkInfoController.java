@@ -1,6 +1,7 @@
 package mtr;
 
 import java.util.List;
+import java.util.Map;
 
 public class NetworkInfoController implements Controller {
 
@@ -17,7 +18,11 @@ public class NetworkInfoController implements Controller {
     public String listAllTermini() {
 
 
-        return mtrLines.toString();
+        List<MtrStation> terminuses = csvReader.getTerminuses();
+
+        //todo prettyify it here instead of returning to string. do a string builder perhaps
+
+        return terminuses.toString();
 
         /**
          * LINE
@@ -35,7 +40,11 @@ public class NetworkInfoController implements Controller {
 
     @Override
     public String listStationsInLine(String line) {
-        return null;
+
+        Map<String, MtrLine> mtrLineMap = csvReader.getLinesMap();
+
+
+        return mtrLineMap.get(line).toString();
     }
 
     @Override
