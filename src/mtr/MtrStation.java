@@ -1,10 +1,14 @@
 package mtr;
 
+import java.util.List;
+
 public class MtrStation {
     private String name;
 
     private MtrStation previousStation;
     private MtrStation nextStation;
+
+    private List<MtrStation> connections;
 
     public MtrStation(String name) {
         this.name = name;
@@ -39,5 +43,17 @@ public class MtrStation {
 
     public void setNextStation(MtrStation nextStation) {
         this.nextStation = nextStation;
+    }
+
+    public List<MtrStation> getConnections() {
+        return connections;
+    }
+
+    public void setConnections(List<MtrStation> connections) {
+        this.connections = connections;
+    }
+
+    public void addConnection(MtrStation mtrStation) {
+        connections.add(mtrStation);
     }
 }

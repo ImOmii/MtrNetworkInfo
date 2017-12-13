@@ -85,6 +85,16 @@ public class CsvReader {
             e.printStackTrace();
         }
 
+        //here
+        //local arraylist nodes
+        List<MtrStation> listNode = new ArrayList<MtrStation>();
+        //local variable previousConnection
+         MtrStation previousConnection = null;
+
+        //For loop that goes through all mtrLine and then another for loop that goes to every station within the line
+        //when it finds a new station, itll add it to the nodes array. (you can check if its a new station by doing a string compare)
+        // if its already in the nodes array, itll just use that element and add a new connection
+
         return mtrLines;
     }
 

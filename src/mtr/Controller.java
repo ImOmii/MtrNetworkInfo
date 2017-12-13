@@ -37,7 +37,7 @@ public interface Controller {
 	 * Lists a path between the specified stations.
 	 * The path is represented as a sequence of the name of the stations between the specified stations. 
 	 * @param stationA	the name of a station
-	 * @param stationB	the name of another station
+	 * @param stationB	the name of another station`
 	 * @return	a String representation of a path between the specified stations
 	 */
 	String showPathBetween(String stationA, String stationB);
