@@ -18,6 +18,8 @@ public class NetworkInfoController implements Controller {
     public String listAllTermini() {
 
 
+
+
         List<MtrStation> terminuses = csvReader.getTerminuses();
 
         //todo prettyify it here instead of returning to string. do a string builder perhaps
@@ -40,9 +42,15 @@ public class NetworkInfoController implements Controller {
 
     @Override
     public String listStationsInLine(String line) {
-
         Map<String, MtrLine> mtrLineMap = csvReader.getLinesMap();
-        return mtrLineMap.get(line).toString();
+
+        try {
+           return mtrLineMap.get(line).toString();
+        }
+        catch (Exception e) {
+            return "That is an invalid input. Please make sure you spelt the line correctly.";
+
+        }
     }
 
     @Override

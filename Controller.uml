@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>mtr.Controller</OriginalElement>
+  <nodes>
+    <node x="0.0" y="397.0">mtr.TUI</node>
+    <node x="0.0" y="671.0">mtr.Main</node>
+    <node x="329.0" y="397.0">mtr.MtrStation</node>
+    <node x="317.0" y="0.0">mtr.CsvReader</node>
+    <node x="0.0" y="0.0">mtr.Controller</node>
+    <node x="0.0" y="167.0">mtr.NetworkInfoController</node>
+    <node x="596.0" y="397.0">mtr.MtrLine</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="mtr.NetworkInfoController" target="mtr.Controller">
+      <point x="0.0" y="-92.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="397.6666666666665" y="212.83333333333326" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

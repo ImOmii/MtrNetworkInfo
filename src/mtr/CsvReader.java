@@ -17,10 +17,6 @@ public class CsvReader {
 
     public CsvReader() {
         csvFile = "MTRsystem_partial.csv";
-
-        //todo debug remove this later
-        loadLines();
-
     }
 
     public List<MtrLine> loadLines() {
@@ -114,45 +110,45 @@ public class CsvReader {
         //local variable previousConnection
          MtrStation previousConnection = null;
 
-        /*//For loop that goes through all mtrLine and then another for loop that goes to every station within the line
-        for (int i = 0; i < mtrLines.size(); i++) {
-            for (int j = 0; j < mtrLines.get(i).getMtrStations().size(); j++) {
-
-                MtrStation currentStation = mtrLines.get(i).getMtrStations().get(j);
-
-                //Add to list node if it doesn't exist there
-                MtrStation nodeStation = getStationInNodes(currentStation, listNode);
-
-                boolean isNewStation = false;
-
-                if (nodeStation != null) {
-                    isNewStation = false;
-                } else {
-                    isNewStation = true;
-                    nodeStation = currentStation;
-                }
-
-                if (previousConnection != null)
-                    nodeStation.addConnection(previousConnection);
-
-//                if (j != mtrLines.get(i).getMtrStations().size() - 1) {
-//                    MtrStation nextStation = mtrLines.get(i).getMtrStations().get(j + 1);
-//
-//                    if (nextStation != null)
-//                        nextStation.addConnection(nodeStation);
-//                }
-
-                if(isNewStation){
-                    //The station is not in the nodes, so lets add it
-                    listNode.add(nodeStation);
-                }
-
-                previousConnection = mtrLines.get(i).getMtrStations().get(j);
-
-            }
-        }*/
-        //when it finds a new station, itll add it to the nodes array. (you can check if its a new station by doing a string compare)
-        // if its already in the nodes array, itll just use that element and add a new connection
+//        /*//For loop that goes through all mtrLine and then another for loop that goes to every station within the line
+////        for (int i = 0; i < mtrLines.size(); i++) {
+////            for (int j = 0; j < mtrLines.get(i).getMtrStations().size(); j++) {
+////
+////                MtrStation currentStation = mtrLines.get(i).getMtrStations().get(j);
+////
+////                //Add to list node if it doesn't exist there
+////                MtrStation nodeStation = getStationInNodes(currentStation, listNode);
+////
+////                boolean isNewStation = false;
+////
+////                if (nodeStation != null) {
+////                    isNewStation = false;
+////                } else {
+////                    isNewStation = true;
+////                    nodeStation = currentStation;
+////                }
+////
+////                if (previousConnection != null)
+////                    nodeStation.addConnection(previousConnection);
+////
+//////                if (j != mtrLines.get(i).getMtrStations().size() - 1) {
+//////                    MtrStation nextStation = mtrLines.get(i).getMtrStations().get(j + 1);
+//////
+//////                    if (nextStation != null)
+//////                        nextStation.addConnection(nodeStation);
+//////                }
+////
+////                if(isNewStation){
+////                    //The station is not in the nodes, so lets add it
+////                    listNode.add(nodeStation);
+////                }
+////
+////                previousConnection = mtrLines.get(i).getMtrStations().get(j);
+////
+////            }
+////        }*/
+//        //when it finds a new station, itll add it to the nodes array. (you can check if its a new station by doing a string compare)
+//        // if its already in the nodes array, itll just use that element and add a new connection
 
         return mtrLines;
     }

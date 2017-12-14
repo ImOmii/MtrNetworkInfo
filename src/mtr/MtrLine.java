@@ -21,12 +21,8 @@ public class MtrLine {
     public void setName(String name) {
         this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return "MtrLine{" +
-                ", mtrStations=" + mtrStations +
-                '}';
+    public String toString(){
+        return "(Line) " + getName() + " / " + "(Stations)" + mtrStations ;
     }
 
     public List<MtrStation> getMtrStations() {

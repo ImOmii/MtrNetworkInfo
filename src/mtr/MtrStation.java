@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MtrStation {
-    private String name;
+    private String name; //Hold the name of stations
 
-    private MtrStation previousStation;
-    private MtrStation nextStation;
+    private MtrStation previousStation; //Holds previous stations
+    private MtrStation nextStation; //Holds the next station
 
     private List<MtrStation> connections = new ArrayList<>();
 
@@ -17,17 +17,22 @@ public class MtrStation {
 
     public String getName() {
         return name;
-    }
+    } //Getter for name
 
     public void setName(String name) {
         this.name = name;
-    }
+    } //Setter for name
 
-    @Override
-    public String toString() {
-        return "MtrStation{" +
-                "name='" + name + '\'' +
-                '}';
+//    @Override
+//    public String toString() {
+//        return "MtrStation{" +
+//                "name='" + name + '\'' +
+//                '}';
+//    }
+
+    public String toString(){
+        //Generate the name of station in console
+        return name;
     }
 
     public MtrStation getPreviousStation() {
