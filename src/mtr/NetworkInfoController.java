@@ -42,8 +42,6 @@ public class NetworkInfoController implements Controller {
     public String listStationsInLine(String line) {
 
         Map<String, MtrLine> mtrLineMap = csvReader.getLinesMap();
-
-
         return mtrLineMap.get(line).toString();
     }
 

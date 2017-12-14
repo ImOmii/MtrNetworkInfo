@@ -1,5 +1,6 @@
 package mtr;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MtrStation {
@@ -8,7 +9,7 @@ public class MtrStation {
     private MtrStation previousStation;
     private MtrStation nextStation;
 
-    private List<MtrStation> connections;
+    private List<MtrStation> connections = new ArrayList<>();
 
     public MtrStation(String name) {
         this.name = name;
